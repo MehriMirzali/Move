@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Move Object</title>
+        <style>
+            img{
+height: 300px;
+width: 400px;
+            }
+        </style>
+    </head>
+
+    <body  onkeydown="" onkeyup="move(event)">
+        <img id="image1" src="m.jpg" style="position: absolute; left: 0; right: 15; top: 15; bottom: auto">
+        <script>
+            var element = document.getElementById("image1");
+            function left() {
+                element.style.left = parseInt(element.style.left) - 72 + 'px';
+            }
+            function right() {
+                element.style.left = parseInt(element.style.left) + 72 + 'px';
+            }
+            function move(event) {
+                switch (event.keyCode) {
+                    case 37:
+                    left();
+                        break;
+                    case 39:
+                        right();
+                }
+            };
+        </script>
+    </body>
+</html>
